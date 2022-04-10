@@ -3,6 +3,7 @@
     "version": "1.00",
     "description": "Pega o código da mesa para realizar o cheking sem precisar de QRCODE",
     "browser_action":{
+        "default_icon": "icon.png",
         "default_popup":"popup.html"
     },
 
@@ -10,5 +11,12 @@
     "permissions": [
         "activeTab",
         "<all_urls>"
-    ]
+    ],
+    "icons":{
+        "16":"icon.png",
+        "48":"icon.png",
+        "128":"icon.png"
+
+    }
+    
 }
