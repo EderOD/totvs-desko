@@ -1,11 +1,14 @@
 {
     "name": "Totvs Desko",
-    "version": "0.202204",
+    "version": "1.00",
     "description": "Pega o código da mesa para realizar o cheking sem precisar de QRCODE",
     "browser_action":{
         "default_popup":"popup.html"
     },
 
-    "manifest_version": 2
-    
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab",
+        "<all_urls>"
+    ]
 }
