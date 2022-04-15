@@ -3,11 +3,35 @@
 <head>
   <title>TOTVS Desko</title>
 </head>
+<style>
+  button#copy {
+      background-image: url(./icons8-copy-64.png);
+      background-size: cover;
+      width: 13%;
+      height: 23px;
+      margin-left: 88%;
+      margin-top: -24px;
+  }
+  button#copy::after {
+    content: 'Copy to Clipboard';
+    display: none;
+    position: absolute; 
+    top: 31px;
+    left: 42%;
+    
+  }
+  button#copy::after:active {
+    background-color: #eee;
+    display: block;
+    
+  }
+</style>
 <body>
     <input id="texto" type="text">
     <button id="btn">Get Code</button>
-    <div id="result"></div>
-
+    <div id="result" style="margin-top: 4%;"></div>
+    <button id="copy" style="display:none;"></button>
+    <div id="after" style="margin-top: -22%;margin-left: 70%; display: none; position: absolute; background-color: #555; color: #eee;">&nbsp;Copied&nbsp;</div>
 <script type="text/javascript" src="popup.js"></script>
 </body>
 </html>

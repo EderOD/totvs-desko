@@ -6,6 +6,7 @@ document.querySelector('#btn').addEventListener('click',function(){
     }, (results) => {
         let text = results
         document.querySelector("#result").innerHTML = concatCode(text);
+        document.getElementById("copy").style.display = "block";
         return results
     });
 })
@@ -17,4 +18,11 @@ function concatCode(text){
         return 'EST.BH.MG.2/' + text
 }
 
+document.querySelector('#copy').addEventListener('click',function(){
+    var text = document.getElementById("result");
+    navigator.clipboard.writeText(text.innerText);
+    
+    document.getElementById("after").style.display = "block";
+})
+ 
 })
